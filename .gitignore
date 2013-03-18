@@ -19,3 +19,8 @@ doc/
 .project
 .DS_Store
 .idea
+
+# Ignore some specific image files
+grasses.tif
+perrenials.tif
+pondplants.tif
