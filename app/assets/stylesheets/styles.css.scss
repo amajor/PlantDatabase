@@ -1,7 +1,5 @@
-/* Change the Font
-$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);
-*/
+/* Change the Font */
+@import url(http://fonts.googleapis.com/css?family=Permanent+Marker);
 
 /*
 $btnPrimaryBackground: green;
@@ -12,6 +10,19 @@ $navbarBackground: gray;
 @import 'bootstrap';
 
 body { margin-top: 60px; }
+h1, h2, h3, h4, h5, h6, .brand { font-family: "Permanent Marker"; }
+
+.logo-home-page {
+  height: 265px;
+  display: block;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+
+.top-paragraph { margin-top: 15px; }
+
+.btn { margin-top: 30px; }
 
 .footer {
 	margin-top: 50px;
