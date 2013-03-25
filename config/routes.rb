@@ -1,4 +1,7 @@
 PlantDatabase::Application.routes.draw do
+  resources :shares
+
+
   devise_for :users
 
   get 'contact' => 'pages#contact'
