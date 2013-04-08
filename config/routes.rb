@@ -1,8 +1,10 @@
 PlantDatabase::Application.routes.draw do
+  get "user/show"
+
   resources :shares
 
-
   devise_for :users
+  match 'users/:id' => 'users#show', as: :user
 
   get 'contact' => 'pages#contact'
   
