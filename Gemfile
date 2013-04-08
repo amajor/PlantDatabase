@@ -7,6 +7,7 @@ gem 'simple_form'
 gem 'rmagick'
 gem 'paperclip', '~> 3.3.0'
 gem 'aws-sdk'
+gem 'faker', '1.1.2'
 
 group :development, :test do
 	gem 'sqlite3'

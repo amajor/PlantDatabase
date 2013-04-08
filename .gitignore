@@ -23,6 +23,9 @@ doc/
 # Ignore Paperclip uploaded files
 /public/system
 
+#Ignore sampleimages
+/sampleimages
+
 # Ignore some specific image files
 grasses.tif
 pondplants.tif
