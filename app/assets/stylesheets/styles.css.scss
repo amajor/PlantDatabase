@@ -84,4 +84,33 @@ h1, h2, h3, h4, h5, h6, .brand { font-family: "Permanent Marker"; }
 
 /*---- END CAROUSEL -----*/
 
+/* Required for jQuery Masonry */
+
+.box {
+    margin: 5px;
+    padding: 5px;
+    font-size: 11px;
+    line-height: 1.4em;
+    float: left;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #444;
+    width: 214px;
+}
+
+.box img {
+    diplay: block;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.description {
+    margin: 10px 0 5px;
+}
+
+/*----- END JQUERY MASONRY -----*/
+
 @import 'bootstrap-responsive';

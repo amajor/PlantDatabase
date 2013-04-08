@@ -4,7 +4,8 @@ gem 'rails', '3.2.12'
 gem 'jquery-rails'
 gem 'devise'
 gem 'simple_form'
-gem "paperclip", "~> 3.3.0"
+gem 'rmagick'
+gem 'paperclip', '~> 3.3.0'
 
 group :development, :test do
 	gem 'sqlite3'
