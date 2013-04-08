@@ -5,6 +5,7 @@ PlantDatabase::Application.routes.draw do
   devise_for :users
 
   get 'contact' => 'pages#contact'
+  
   root :to => 'shares#index'
 
   # The priority is based upon order of creation:
