@@ -8,6 +8,8 @@ gem 'rmagick'
 gem 'paperclip', '~> 3.3.0'
 gem 'aws-sdk'
 gem 'faker', '1.1.2'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 
 group :development, :test do
 	gem 'sqlite3'
