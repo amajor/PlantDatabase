@@ -2,8 +2,12 @@
 	<div class="span6 offset3">
 		<div class="well">
 			<%= image_tag @plant.image(:large) %>
+			<p id="botanical_name">
+			  <strong>Botanical Name:</strong>
+			  <%= @plant.botanical_name %>
+			</p>
 			<p>
-			  <b>Common Name:</b>
+			  <strong>Common Name:</strong>
 			  <%= @plant.common_name %>
 			</p>
 			<% if user_signed_in? %>
