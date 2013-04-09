@@ -1,4 +1,7 @@
 PlantDatabase::Application.routes.draw do
+  resources :plants
+
+
   get "user/show"
 
   resources :shares

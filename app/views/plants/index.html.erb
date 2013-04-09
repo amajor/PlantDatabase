@@ -1,0 +1,19 @@
+<h1>Listing Plants</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Common Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @plants %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Plant', new_plant_path %>
