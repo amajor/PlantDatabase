@@ -11,6 +11,8 @@ gem 'faker', '1.1.2'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 
+gem "friendly_id", "~> 4.0.9" # Note: You MUST use 4.0.9 or greater for Rails 3.2.10+
+
 group :development, :test do
 	gem 'sqlite3'
 end
