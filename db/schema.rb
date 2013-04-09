@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409222406) do
+ActiveRecord::Schema.define(:version => 20130409224240) do
 
   create_table "plants", :force => true do |t|
     t.string   "common_name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20130409222406) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "botanical_name"
+    t.string   "cultivar"
   end
 
   create_table "shares", :force => true do |t|
