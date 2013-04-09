@@ -18,6 +18,10 @@
                         </li>
                     </ul>
                     <ul class="nav pull-right">
+                        <% if @admin %>
+                            <li><%= link_to 'Admin', 
+                                admin_path %></li>
+                        <% end %>
                     	<% if user_signed_in? %>
                             <li><%= link_to 'Just Ask', new_share_path %></li>
                     		<li><%= link_to 'Edit Profile',  edit_user_registration_path %></li>
