@@ -1,11 +1,12 @@
-<tr>
-	<td><%= image_tag plant.image(:thumbnail) %></td>
-  <td><%= plant.common_name %></td>
-  <td><%= link_to 'Show', plant %></td>
-  <% if user_signed_in? %>
-    <% if current_user.admin? %>
-		  <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-		  <td><%= link_to 'Delete', plant, method: :delete, data: { confirm: 'Are you sure? This will permanently delete this plant.' } %></td>
-  	<% end %>
-  <% end %>
-</tr>
+<div class="box">
+    <%= link_to (image_tag plant.image(:medium)), plant %>
+    <p class="common_name">
+        <%= plant.common_name %>
+    </p>
+    <% if user_signed_in? && current_user.admin? %>
+        <p>
+          <%= link_to 'Edit', edit_plant_path(plant) %>
+          <%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure? This will permanently delete the plant.' } %>
+        </p>
+    <% end %>
+</div>
