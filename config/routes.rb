@@ -10,6 +10,8 @@ PlantDatabase::Application.routes.draw do
   match 'users/:id' => 'users#show', as: :user
 
   get 'contact' => 'pages#contact'
+  get 'shares_page' => 'shares#index'
+  get 'plants_page' => 'plants#index'
   
   root :to => 'shares#index'
 

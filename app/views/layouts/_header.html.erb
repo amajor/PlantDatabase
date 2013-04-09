@@ -14,8 +14,14 @@
                             <%= link_to 'Home',  root_path %>
                         </li>
                         <li>    
-                            <%= link_to 'Contact',  contact_path %>
+                            <%= link_to 'Plants',  plants_page_path %>
                         </li>
+                        <li>    
+                            <%= link_to 'Shared',  shares_page_path %>
+                        </li>
+                        <li>    
+                            <%= link_to 'Contact',  contact_path %>
+                        </li>                                                
                     </ul>
                     <ul class="nav pull-right">
                     	<% if user_signed_in? %>
