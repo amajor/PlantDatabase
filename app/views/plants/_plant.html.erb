@@ -1,4 +1,5 @@
 <tr>
+	<td><%= image_tag plant.image(:thumbnail) %></td>
   <td><%= plant.common_name %></td>
   <td><%= link_to 'Show', plant %></td>
   <% if user_signed_in? %>
