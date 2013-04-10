@@ -32,7 +32,7 @@
 			</p>
 			
 			<hr />
-			
+
 			<% if @plant.water_depth? %>
 				<p>
 				  <strong>Water Depth:</strong>
@@ -67,6 +67,12 @@
 				<p>
 				  <strong>Characteristics:</strong>
 				  <%= @plant.characteristics %>
+				</p>
+			<% end %>
+			<% if @plant.notes? %>
+				<p>
+				  <strong>Additional Notes:</strong>
+				  <%= @plant.notes %>
 				</p>
 			<% end %>								
 
