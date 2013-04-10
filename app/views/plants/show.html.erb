@@ -37,6 +37,12 @@
 				  <%= @plant.water_depth %>
 				</p>
 			<% end %>
+			<% if @plant.height? %>
+				<p>
+				  <strong>Height:</strong>
+				  <%= @plant.height %>
+				</p>
+			<% end %>
 
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
