@@ -1,7 +1,9 @@
 <div class="row">
 	<div class="span6 offset3">
 		<div class="well">
-			<%= image_tag @plant.image(:large) %>
+			<center>
+				<%= image_tag @plant.image(:large) %>
+			</center>
 			<p id="botanical_name">
 			  <strong>Botanical Name:</strong>
 			  <%= @plant.botanical_name %>
@@ -20,11 +22,19 @@
 			</p>
 			<p>
 			  <strong>Stock Status:</strong>
-			  <%= @plant.status %>
+			  <% if @plant.status == "Out of Stock" %>
+			  	<span style="color: red;"><%= @plant.status %></span>
+			  <% elsif @plant.status == "In Stock" %>
+			  	<span style="color: green;"><strong><%= @plant.status %></strong></span>
+			  <% else %>
+			  	<%= @plant.status %>
+			  <% end %>
 			</p>			
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
-					<%= link_to 'Edit', edit_plant_path(@plant) %> |
+					<%= link_to 'Edit', edit_plant_path(@plant) %> | 
+          <%= link_to 'Delete', @plant, method: :delete, data: { confirm: 'Are you sure? This will permanently delete the plant.' } %> 
+        </p>
 				<% end %>
 			<% end %>
 			<%= link_to 'Back', plants_path %>

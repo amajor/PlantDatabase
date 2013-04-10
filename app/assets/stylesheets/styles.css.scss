@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, .brand { font-family: "Permanent Marker"; }
 	a { color: gray; }
 }
 
-#botanical_name { margin-top: 10px; font-size: 1.25em; }
+#plant_pin_text { margin-top: 10px; font-size: 1.15em; }
 
 /* Required for jQuery Masonry */
 
@@ -58,8 +58,6 @@ h1, h2, h3, h4, h5, h6, .brand { font-family: "Permanent Marker"; }
 .description {
     margin: 10px 0 5px;
 }
-
-.common_name { margin-bottom: 5px; }
 
 #botanical_name { margin-top: 10px; }
 

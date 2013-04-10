@@ -1,9 +1,10 @@
 <div class="box">
     <%= link_to (image_tag plant.image(:medium)), plant %>
-    <p id="botanical_name">
-        <%= plant.botanical_name %>
-    </p>
-    <p class="common_name">
+    <p id="plant_pin_text">
+        <strong>
+            <%= plant.botanical_name %>
+        </strong>
+        <br/>
         <%= plant.common_name %>
     </p>
     <% if user_signed_in? && current_user.admin? %>
