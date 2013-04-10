@@ -1,5 +1,5 @@
 class SharesController < ApplicationController
-  before_filter :authenticate_user!, except: [:index, :show]
+  before_filter :authenticate_user!, except: [:index]
 
   # GET /shares
   # GET /shares.json
@@ -11,6 +11,17 @@ class SharesController < ApplicationController
       format.json { render json: @shares }
     end
   end
+
+  # GET /myshares
+  # GET /myshares.json
+  # def myshares
+  #   @shares = current_user.shares.all
+  #
+  #   respond_to do |format|
+  #     format.html # myshares.html.erb
+  #     format.json { render json: @shares }
+  #   end
+  # end
 
   # GET /shares/1
   # GET /shares/1.json
@@ -36,8 +47,7 @@ class SharesController < ApplicationController
 
   # GET /shares/1/edit
   def edit
-    # @share = current_user.shares.find(params[:id])
-    @share = Share.find(params[:id]) #allows admin to edit...
+    @share = current_user.shares.find(params[:id])
   end
 
   # POST /shares
@@ -59,8 +69,7 @@ class SharesController < ApplicationController
   # PUT /shares/1
   # PUT /shares/1.json
   def update
-    #@share = current_user.shares.find(params[:id])
-    @share = Share.find(params[:id]) #allows admin to update...
+    @share = current_user.shares.find(params[:id])
 
     respond_to do |format|
       if @share.update_attributes(params[:share])
@@ -76,8 +85,7 @@ class SharesController < ApplicationController
   # DELETE /shares/1
   # DELETE /shares/1.json
   def destroy
-    # @share = current_user.shares.find(params[:id])
-    @share = Share.find(params[:id]) #allows admin to edit...
+    @share = current_user.shares.find(params[:id])
     @share.destroy
 
     respond_to do |format|

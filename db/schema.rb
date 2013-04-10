@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410011920) do
+ActiveRecord::Schema.define(:version => 20130410020719) do
 
   create_table "plants", :force => true do |t|
     t.string   "common_name"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130410011920) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "comment"
   end
 
   add_index "shares", ["user_id"], :name => "index_shares_on_user_id"

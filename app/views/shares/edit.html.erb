@@ -1,6 +1,11 @@
 <h1>Editing Question or Share</h1>
-
-<%= render 'form' %>
+	<% if user_signed_in? && current_user.admin? %>
+    <p>
+      <%= render 'comment' %>
+    </p>
+  <% elsif user_signed_in? %>
+		<%= render 'form' %>
+  <% end %>
 
 <%= link_to 'Show', @share %> |
 <%= link_to 'Back', shares_path %>
