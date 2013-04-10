@@ -43,6 +43,12 @@
 				  <%= @plant.height %>
 				</p>
 			<% end %>
+			<% if @plant.spread? %>
+				<p>
+				  <strong>Spread:</strong>
+				  <%= @plant.spread %>
+				</p>
+			<% end %>
 
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
