@@ -14,6 +14,10 @@
 			  <strong>Cultivar:</strong>
 			  <%= @plant.cultivar %>
 			</p>
+			<p>
+			  <strong>Plant Type:</strong>
+			  <%= @plant.plant_type %>
+			</p>			
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
 					<%= link_to 'Edit', edit_plant_path(@plant) %> |
