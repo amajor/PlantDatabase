@@ -29,7 +29,15 @@
 			  <% else %>
 			  	<%= @plant.status %>
 			  <% end %>
-			</p>			
+			</p>
+			
+			<% if @plant.water_depth? %>
+				<p>
+				  <strong>Water Depth:</strong>
+				  <%= @plant.water_depth %>
+				</p>
+			<% end %>
+
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
 					<%= link_to 'Edit', edit_plant_path(@plant) %> | 

@@ -1,5 +1,7 @@
 class Plant < ActiveRecord::Base
-  attr_accessible :image, :botanical_name, :common_name, :cultivar, :plant_type, :status
+  attr_accessible :image, :botanical_name, :common_name, 
+  								:cultivar, :plant_type, :status,
+  								:water_depth
 
   validates :botanical_name, presence: true
   validates :common_name, presence: true
