@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130410010845) do
+ActiveRecord::Schema.define(:version => 20130410011220) do
 
   create_table "plants", :force => true do |t|
     t.string   "common_name"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130410010845) do
     t.string   "spread"
     t.string   "light_requirement"
     t.string   "habit"
+    t.string   "characteristics"
   end
 
   create_table "shares", :force => true do |t|

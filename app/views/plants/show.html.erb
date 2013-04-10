@@ -31,6 +31,8 @@
 			  <% end %>
 			</p>
 			
+			<hr />
+			
 			<% if @plant.water_depth? %>
 				<p>
 				  <strong>Water Depth:</strong>
@@ -60,7 +62,13 @@
 				  <strong>Habit:</strong>
 				  <%= @plant.habit %>
 				</p>
-			<% end %>						
+			<% end %>	
+			<% if @plant.characteristics? %>
+				<p>
+				  <strong>Characteristics:</strong>
+				  <%= @plant.characteristics %>
+				</p>
+			<% end %>								
 
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
