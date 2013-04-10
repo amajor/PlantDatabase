@@ -49,6 +49,12 @@
 				  <%= @plant.spread %>
 				</p>
 			<% end %>
+			<% if @plant.light_requirement? %>
+				<p>
+				  <strong>Light Requirement:</strong>
+				  <%= @plant.light_requirement %>
+				</p>
+			<% end %>			
 
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>
