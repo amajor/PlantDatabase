@@ -7,24 +7,40 @@
   <%= f.input :botanical_name, label: "Botanical Name" %>
   <%= f.input :common_name, label: "Common Name" %>
   <%= f.input :cultivar, label: "Cultivar" %>
-  <label class="string required control-label" for="plant_type">
-  	<abbr title="required">*</abbr>
-  	Plant Type
-  </label>
-  <div class="controls">
-	  <%= f.select :plant_type, [
-	  	['Perennial','Perennial'],
-	  	['Grass','Grass'],
-	  	['Woody Ornamental','Woody Ornamental'],
-	  	['Fruit','Fruit'],
-	  	['Vegetable','Vegetable'],
-	  	['Annual','Annual'],
-	  	['Pond Plant','Pond Plant'],
-	  	['Marginal','Marginal'],
-	  	['Vine','Vine'],
-	  	['Fern', 'Fern']
-	  	] %>
-  </div>
+  <div class="control-group string required plant_type">
+	  <label class="string required control-label" for="plant_type">
+	  	<abbr title="required">*</abbr>
+	  	Plant Type
+	  </label>
+	  <div class="controls">
+		  <%= f.select :plant_type, [
+		  	['Perennial','Perennial'],
+		  	['Grass','Grass'],
+		  	['Woody Ornamental','Woody Ornamental'],
+		  	['Fruit','Fruit'],
+		  	['Vegetable','Vegetable'],
+		  	['Annual','Annual'],
+		  	['Pond Plant','Pond Plant'],
+		  	['Marginal','Marginal'],
+		  	['Vine','Vine'],
+		  	['Fern', 'Fern']
+		  	] %>
+	  </div>
+	</div>
+	<div class="control-group string required status">
+	  <label class="string required control-label" for="status">
+	  	<abbr title="required">*</abbr>
+	  	Status
+	  </label>
+	  <div class="controls">
+		  <%= f.select :status, [
+		  	['Unknown','Unknown'],
+		  	['In Stock','In Stock'],
+		  	['Out of Stock','Out of Stock'],
+		  	['In Production','In Production']
+		  	] %>
+	  </div>
+	</div>
   <div class="form-actions">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>

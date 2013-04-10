@@ -17,6 +17,10 @@
 			<p>
 			  <strong>Plant Type:</strong>
 			  <%= @plant.plant_type %>
+			</p>
+			<p>
+			  <strong>Stock Status:</strong>
+			  <%= @plant.status %>
 			</p>			
 			<% if user_signed_in? %>
   			<% if current_user.admin? %>

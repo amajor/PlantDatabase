@@ -1,10 +1,11 @@
 class Plant < ActiveRecord::Base
-  attr_accessible :image, :botanical_name, :common_name, :cultivar, :plant_type
+  attr_accessible :image, :botanical_name, :common_name, :cultivar, :plant_type, :status
 
   validates :botanical_name, presence: true
   validates :common_name, presence: true
   validates :cultivar, presence: true
   validates :plant_type, presence: true
+  validates :status, presence: true
   validates_attachment :image, presence: true,
   														content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png'] },
   														size: { less_than: 5.megabytes }
