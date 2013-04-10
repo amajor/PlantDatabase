@@ -27,7 +27,7 @@
                     	<% if user_signed_in? %>
                             <% if current_user.admin? %>
                                 <li><%= link_to 'ADMIN',
-                                    new_share_path %></li>
+                                    plants_path %></li>
                             <% end %>
                             <li><%= link_to 'Just Ask', new_share_path %></li>
                     		<li><%= link_to 'Edit Profile',  edit_user_registration_path %></li>
