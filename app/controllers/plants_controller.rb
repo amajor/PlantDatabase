@@ -2,7 +2,8 @@ class PlantsController < ApplicationController
   # GET /plants
   # GET /plants.json
   def index
-    @plants = Plant.order("botanical_name asc").page(params[:page]).per_page(20)
+  # @plants = Plant.order("botanical_name asc").page(params[:page]).per_page(20)
+    @plants = Plant.order("botanical_name asc")
 
     respond_to do |format|
       format.html # index.html.erb
